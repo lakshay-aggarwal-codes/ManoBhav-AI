@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+models/*.keras
+models/*.h5
+
+results/*.png
+results/*.csv
+
+data/*
+!data/README.md
+node_modules

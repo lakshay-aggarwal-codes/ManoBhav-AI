@@ -1,0 +1,87 @@
+.section {
+  background: linear-gradient(180deg, transparent, rgba(108, 99, 255, 0.03), transparent);
+}
+
+.header {
+  max-width: 620px;
+  margin: 0 auto 64px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.title {
+  font-size: clamp(28px, 3.6vw, 40px);
+}
+
+.timeline {
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 27px;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--indigo), transparent);
+}
+
+.step {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 44px;
+  position: relative;
+}
+
+.step:last-child {
+  padding-bottom: 0;
+}
+
+.stepMarker {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--cyan);
+  z-index: 1;
+}
+
+.stepBody {
+  padding-top: 8px;
+}
+
+.stepTitle {
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.stepDesc {
+  font-size: 14.5px;
+  max-width: 480px;
+}
+
+@media (max-width: 560px) {
+  .timeline::before {
+    left: 23px;
+  }
+  .stepMarker {
+    width: 48px;
+    height: 48px;
+  }
+  .step {
+    gap: 18px;
+  }
+}

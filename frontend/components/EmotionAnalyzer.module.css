@@ -1,0 +1,158 @@
+.section {
+  padding-top: 60px;
+}
+
+.header {
+  max-width: 640px;
+  margin: 0 auto 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.title {
+  font-size: clamp(28px, 3.6vw, 40px);
+}
+
+.subtitle {
+  font-size: 16px;
+}
+
+.card {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.inputWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 130px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15.5px;
+  line-height: 1.6;
+  transition: border-color 0.2s ease;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--cyan);
+}
+
+.textarea::placeholder {
+  color: var(--text-faint);
+}
+
+.inputFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.counter {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-faint);
+}
+
+.counterOver {
+  color: #ff6b6b;
+}
+
+.examples {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.exampleChip {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  color: var(--text-faint);
+  font-size: 11.5px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.exampleChip:hover {
+  border-color: var(--border-strong);
+  color: var(--text-muted);
+}
+
+.analyzeBtn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 16px;
+  font-size: 15.5px;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.loaderDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cyan);
+  animation: bounce 1s infinite ease-in-out;
+}
+
+.loaderDot:nth-child(2) { animation-delay: 0.15s; }
+.loaderDot:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0.6); opacity: 0.5; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+.loaderText {
+  font-size: 13px;
+  color: var(--text-faint);
+  margin-left: 4px;
+}
+
+.errorBox {
+  margin-top: 20px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 107, 107, 0.08);
+  border: 1px solid rgba(255, 107, 107, 0.25);
+  color: #ffb3b3;
+  font-size: 14px;
+}
+
+.resultWrap {
+  max-width: 720px;
+  margin: 28px auto 0;
+}
+
+@media (max-width: 560px) {
+  .card {
+    padding: 22px 18px;
+  }
+  .examples {
+    justify-content: flex-start;
+  }
+}
