@@ -1,3 +1,5 @@
+Live Demo: https://endearing-puppy-08c583.netlify.app/
+
 # NLP Emotion Classification
 
 A deep-learning NLP project using the DAIR.AI Emotion dataset and comparing:
